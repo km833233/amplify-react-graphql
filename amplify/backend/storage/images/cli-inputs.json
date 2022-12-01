@@ -1,0 +1,14 @@
+{
+  "resourceName": "images",
+  "policyUUID": "9334a238",
+  "bucketName": "amplifygraphqlbucket",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
