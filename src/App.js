@@ -1,12 +1,22 @@
+import React, { useState, useEffect } from "react";
+import "./App.css";
 import logo from "./logo.svg";
 import "@aws-amplify/ui-react/styles.css";
+import { API } from "aws-amplify";
+import { listNotes } from "./graphql/queries";
 import {
-  withAuthenticator,
+  createNote as createNoteMutation,
+  deleteNote as deleteNoteMutation,
+} from "./graphql/mutations";
+
+import {
   Button,
+  Flex,
   Heading,
-  Image,
+  Text,
+  TextField,
   View,
-  Card,
+  withAuthenticator,
 } from "@aws-amplify/ui-react";
 
 function App({ signOut }) {
